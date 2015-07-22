@@ -8,6 +8,17 @@ Products.attachSchema(new SimpleSchema({
   desc: {
     type: String,
     label: "説明",
+    max: 200,
+    autoform: {
+      afFieldInput: {
+        type: "textarea",
+        rows: 3
+      }
+    }
+  },
+  url: {
+    type: SimpleSchema.RegEx.Url,
+    label: "URL",
     max: 200
   },
   icon: {
