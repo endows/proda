@@ -15,3 +15,7 @@ mquandalle:jade
 iron:router
 aldeed:autoform
 aldeed:collection2
+yogiben:autoform-file
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem

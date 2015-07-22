@@ -12,6 +12,3 @@
 //   })
 //   res.end(html);
 // });
-Router.route('/', function () {
-  this.response.end('hi from the server\n');
-});
