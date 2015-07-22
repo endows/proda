@@ -1,0 +1,5 @@
+template(name='product_list')
+  {{> quickForm collection="Products" id="insertBookForm" type="insert"}}
+  each products
+    h2 {{title}}
+    img(src="/cfs/files/images/#{icon}")

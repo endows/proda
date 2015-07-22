@@ -1,11 +1,11 @@
-Books = new Mongo.Collection("books");
-Books.attachSchema(new SimpleSchema({
+Products = new Mongo.Collection("products");
+Products.attachSchema(new SimpleSchema({
   title: {
     type: String,
     label: "Title",
     max: 200
   },
-  picture: {
+  icon: {
     type: String,
     autoform: {
       afFieldInput: {
