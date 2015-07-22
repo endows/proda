@@ -1,4 +1,10 @@
 template(name='product_list')
-  each products
-    h2 {{title}}
-    img(src="/cfs/files/images/#{icon}")
+  .row
+    each products
+      .col-md-3.col-md-offset-1
+        a(href="/product/#{_id}")
+          .list-group
+            .list-group-item
+              img.img-responsive(src="/cfs/files/images/#{icon}")
+            .list-group-item
+              span {{title}}

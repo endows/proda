@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+  Router.configure({
+    layoutTemplate: 'layout'
+  });
   Router.route('/', function() {
     this.render('product_list',{
       data:{

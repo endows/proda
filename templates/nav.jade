@@ -1,0 +1,11 @@
+template(name='layout')
+  nav.navbar.navbar-default.navbar-static-top
+    .container
+      .navbar-header
+        a.navbar-brand(href='#')
+          |つくってみた
+      .navbar-right
+        p.navbar-btn
+          a.btn.btn-primary(href='/product/new') アプリを登録
+  .container
+    +yield
