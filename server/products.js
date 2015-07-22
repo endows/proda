@@ -1,5 +1,5 @@
 Picker.route('/', function(params, req, res, next) {
-  SSR.compileTemplate('emailText', ' Now time is:{{time}}');
+  SSR.compileTemplate('emailText', Assets.getText('product_list.html') )
 
   Template.emailText.helpers({
     time: function() {
@@ -7,6 +7,8 @@ Picker.route('/', function(params, req, res, next) {
     }
   });
 
-  var html = SSR.render('emailText')
+  var html = SSR.render('emailText',{
+    css:Assets.getText('style.css')
+  })
   res.end(html);
 });
