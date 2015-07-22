@@ -7,3 +7,6 @@
 meteor-platform
 autopublish
 insecure
+meteorhacks:ssr
+meteorhacks:fast-render
+meteorhacks:picker
