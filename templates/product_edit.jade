@@ -1,2 +1,6 @@
 template(name='product_edit')
-  +quickForm collection="Products" type="insert" id="productEdit"
+  .row
+    .col-md-6.col-md-push-3
+      .panel.panel-default
+        .panel-body
+          +quickForm buttonClasses="btn btn-primary btn-block" buttonContent="登録" collection="Products" type="insert" id="productEdit"
