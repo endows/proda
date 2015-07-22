@@ -6,6 +6,16 @@ template(name='layout')
           |つくってみた
       .navbar-right
         p.navbar-btn
-          a.btn.btn-primary(href='/product/new') アプリを登録
+          button.btn.btn-primary(data-toggle="modal" data-target="#myModal") アプリを登録
+  #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4#myModalLabel.modal-title Modal title
+        .modal-body
+          +quickForm onSuccess="($('#myModal').modal('hide'))()" buttonClasses="btn btn-primary btn-block" buttonContent="登録" collection="Products" type="insert" id="productEdit"
   .container
     +yield
+    
