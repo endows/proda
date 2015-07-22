@@ -3,7 +3,8 @@ template(name='layout')
     .container
       .navbar-header
         a.navbar-brand(href='/')
-          |つくってみた
+          span.glyphicon.glyphicon-ok-sign.text-success
+          |make.it
       .navbar-right
         p.navbar-btn
           button.btn.btn-primary(data-toggle="modal" data-target="#myModal") アプリを登録
@@ -15,7 +16,7 @@ template(name='layout')
             span(aria-hidden='true') ×
           h4#myModalLabel.modal-title Modal title
         .modal-body
-          +quickForm onSuccess="($('#myModal').modal('hide'))()" buttonClasses="btn btn-primary btn-block" buttonContent="登録" collection="Products" type="insert" id="productEdit"
+          +quickForm buttonClasses="btn btn-primary btn-block" buttonContent="登録" collection="Products" type="insert" id="productEdit"
   .container
     +yield
     
