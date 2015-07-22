@@ -1,2 +1,4 @@
 template(name='hello')
   h1 This is hello
+  button.btn.btn-primary 送信
+  {{> quickForm collection="Books" id="insertBookForm" type="insert"}}

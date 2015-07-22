@@ -13,3 +13,5 @@ meteorhacks:picker
 twbs:bootstrap
 mquandalle:jade
 iron:router
+aldeed:autoform
+aldeed:collection2
