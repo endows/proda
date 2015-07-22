@@ -12,3 +12,4 @@ meteorhacks:fast-render
 meteorhacks:picker
 twbs:bootstrap
 mquandalle:jade
+iron:router
