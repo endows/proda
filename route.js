@@ -1,13 +1,19 @@
-Router.route('/', function () {
-  this.render('product_list')
-});
+if (Meteor.isClient) {
+  Router.route('/', function() {
+    this.render('product_list',{
+      data:{
+        products: Products.find()
+      }
+    })
+  });
 
-Router.route('/products/new',function(){
-  this.render('product_edit')
-})
+  Router.route('/product/:_id', function() {
+    this.render('product', {
+      data: Products.findOne(this.params._id)
+    })
+  })
 
-if(Meteor.isClient){
-  Template.product_list.helpers({
-    products:Products.find()
+  Router.route('/product/new', function() {
+    this.render('product_edit')
   })
 }
